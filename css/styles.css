@@ -1,0 +1,841 @@
+:root {
+    --red: #ff0101;
+    --black: #252a34;
+    --blue: #08d9d6;
+    --white: #eaeaea;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+/** Go Top **/
+.go-top{
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--red);
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 400ms;
+}
+.go-top:hover{
+  border: 2px solid var(--white);
+  background: var(--red);
+}
+.go-top:hover span{
+  color: var(--white);
+}
+.go-top > span{
+  font-size: 30px;
+  color: var(--black);
+}
+/** Go Top **/
+
+/** Skew's **/
+.skew-abajo{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 10vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+.skew-abajoi{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 3vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+.skew-arriba{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 10vh 100vw 0 0;
+  border-style: solid;
+  border-color:#fff transparent transparent transparent;
+  z-index: 10;
+}
+/** Skew's **/
+
+/** Menú de Navegación **/
+
+#header {
+    position: relative;
+    width: 100%;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu .logo-box {
+    margin-left: 20px;
+}
+
+.menu .logo-box h1 a {
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.menu .list-container {
+    margin-right: 20px;
+}
+
+.menu .list-container .lists {
+    display: flex;
+}
+
+.menu .list-container .lists li {
+    list-style: none;
+}
+
+.menu .list-container .lists li button {
+    text-decoration: none;
+    background: none;
+    border: none;
+    margin: 0px 10px;
+    padding: 8px;
+    outline: none;
+    color: var(--black);
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu .list-container .lists li button.activo {
+    background: var(--red);
+    color: #fff;
+}
+
+.menu .list-container .lists li button:hover {
+    background: var(--red);
+    color: #fff;
+}
+
+.btn-menu>.fa-bars {
+    display: none;
+}
+
+
+/** Menú de Navegación **/
+
+
+/** IMG Header **/
+
+.img-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/header.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-header .welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-header .welcome h1 {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.img-header .welcome hr {
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+
+.img-header .welcome p {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.img-header .welcome>button {
+    width: 170px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.img-header .welcome>button:hover {
+    background: #ad0000;
+}
+
+
+/** IMG Header **/
+
+
+/** Acerca de Nosotros **/
+
+.acerca-de {
+    width: 100%;
+    margin-top: 120px;
+}
+
+.acerca-de .info-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.acerca-de .info-container h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.acerca-de .info-container p {
+    text-align: center;
+    font-size: 17px;
+    color: var(--black);
+    line-height: 35px;
+    margin: 10px 0px;
+}
+
+.acerca-de .info-container .about-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.acerca-de .info-container .about-gallery img {
+    width: calc(50%-10px);
+    height: 300px;
+    object-fit: cover;
+    margin: 10px 10px;
+    border-radius: 10px;
+    cursor: default;
+}
+
+.acerca-de .info-container .about-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.acerca-de .info-container .about-more button {
+    width: 120px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.acerca-de .info-container .about-more button:hover {
+    background: #ad0000;
+}
+
+
+/** Acerca de Nosotros **/
+
+
+/** Servicios **/
+
+.our-services {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/services.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+
+.our-services .deg-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.our-services .ejeZproject {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.our-services .container-services {
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.our-services .container-services .service-title {
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 200px;
+    width: 50%;
+    margin: auto;
+}
+
+.our-services .container-services .service-title h2 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.our-services .container-services .service-title hr {
+    background: #fff;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.our-services .container-services .service-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+
+.our-services .container-services .service-img img {
+    width: calc(25%-10px);
+    margin: 10px 10px;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 300px;
+}
+
+.our-services .container-services .service-img img.Fhd {
+    height: 260px;
+}
+.our-services .container-services .service-text{
+  align-items: center;
+  justify-content: center;
+}
+.our-services .container-services .card-service{
+  margin: auto;
+  align-items: center;
+}
+.our-services .container-services .service-text h4{
+  text-align: center;
+  font-size: 30px;
+  margin: auto;
+  color: #fff;
+  cursor: default;
+  padding-bottom: 20px;
+}
+/** Servicios **/
+
+
+/** Motos **/
+
+.our-bikes {
+    width: 100%;
+    margin-top: 120px;
+}
+
+.our-bikes .bikes-title {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.our-bikes .bikes-title h2 {
+    font-size: 50px;
+    color: var(--black);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.our-bikes .bikes-title hr {
+    width: 60%;
+    margin: auto;
+    height: 2px;
+    background: var(--black);
+    border: none;
+}
+
+.our-bikes .box-our-bikes {
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.our-bikes .box-our-bikes .card-bike {
+    width: 45%;
+    margin: 20px;
+}
+
+.our-bikes .box-our-bikes .card-bike .card-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-bikes .box-our-bikes .card-bike .card-img img {
+    width: 500px;
+    height: 300px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.our-bikes .box-our-bikes .card-bike .bike-text {
+    width: 100%;
+    border: 2px solid var(--red);
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 200ms;
+}
+.our-bikes .box-our-bikes .card-bike .bike-text h4{
+    color: var(--red);
+    font-weight: normal;
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+.our-bikes .box-our-bikes .card-bike .bike-text p{
+    font-size: 19px;
+    color: var(--black);
+    text-align: center;
+    line-height: 35px;
+    transition: 200ms;
+}
+.our-bikes .box-our-bikes .card-bike .bike-text:hover{
+    border: 2px solid #ad0000;
+}
+.our-bikes .box-our-bikes .card-bike .bike-text:hover h4{
+    color: #ad0000;
+}
+.our-bikes .box-our-bikes .card-bike:hover img{
+    width: 1000px;
+    height: 320px;
+    transition: 100ms;
+}
+/** Motos **/
+
+/** Footer **/
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/footer.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.footer .deg-footer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.footer .ejeZfooter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.footer .footer-content{
+    width: 100%;
+    padding-top: 100px;
+    margin: auto;
+}
+.footer .footer-content .footer-title{
+    width: 50%;
+    margin: auto;
+    border-radius: 200px;
+    border: 2px solid #fff;
+    padding: 15px;
+}
+.footer .footer-content .footer-title h2{
+    color: #fff;
+    font-size: 35px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.footer .footer-content .footer-title hr{
+    width: 80%;
+    margin: auto;
+}
+.footer .footer-content .formulario-content{
+    width: 60%;
+    background: #fff;
+    border-radius: 24px;
+    border: 2px solid var(--red);
+    margin: 50px auto;
+    padding: 30px;
+}
+.footer .footer-content .formulario-content #formulario{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .footer-content .formulario-content #formulario label{
+  text-align: center;
+  color: var(--black);
+  font-size: 22px;
+  margin: 30px 0px 10px 0px;
+}
+.footer .footer-content .formulario-content #formulario input{
+  width: 90%;
+  margin: auto;
+  border: 2px solid var(--red);
+  border-radius: 24px;
+  outline: none;
+  height: 40px;
+  text-align: center;
+  font-size: 17px;
+  color: var(--black);
+
+}
+.footer .footer-content .formulario-content #formulario textarea{
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  border: 2px solid var(--red);
+  border-radius: 24px;
+  outline: none;
+  font-size: 15px;
+  color: var(--black);
+  padding: 20px;
+}
+.footer .footer-content .formulario-content #formulario .send{
+  width: 100%;
+  display: flex;
+  margin: 30px 0px;
+  justify-content: center;
+}
+.footer .footer-content .formulario-content #formulario .send button{
+    width: 150px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 17px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+ .footer .footer-content .formulario-content #formulario .send button:hover{
+  background: #ad0000;
+ }
+ .footer .footer-content .formulario-content #formulario .mensaje-form{
+   font-size: 18px;
+   font-style: normal;
+   font-family: raleway;
+   text-align: center;
+ }
+.footer .footer-content .footer-text{
+  margin-top: 150px;
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 5px solid #fff;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.footer .footer-content .footer-text p{
+  font-size: 20px;
+  color: #fff;
+}
+/** Footer **/
+
+/** Media Query **/
+@media only screen and (max-width:900px){
+  .btn-menu > .fa-bars{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .btn-menu > .fa-bars:hover{
+    color: var(--red);
+  }
+  .btn-menu > .fa-times{
+    color: var(--red);
+  }
+  .menu .list-container{
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh );
+    background: #fff;
+  }
+  .menu .list-container .lists{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 5px solid var(--red);
+  }
+  .menu .list-container .lists li{
+    width: 90%;
+    margin: 10px 0px;
+    border-bottom: 1px solid var(--red);
+    text-align: center;
+  }
+  .menu .list-container .lists li a{
+    font-size: 20px;
+  }
+  .menu .list-container .lists li a.activo{
+    background: none;
+    color: var(--black);
+  }
+  .menu .list-container .lists li a.activo:hover{
+    background: none;
+    color: var(--red);
+  }
+
+  .menu .list-container .lists li a:hover{
+    background: none;
+    color: var(--red);
+  }
+}
+
+@media only screen and (max-width: 773px){
+  /** IMG Header **/
+  .img-header .welcome h1{
+    font-size: 40px;
+  }
+  .img-header .welcome > button{
+    width: 130px;
+    font-size: 20px;
+  }
+  /** IMG Header **/
+
+  /** Nosotros **/
+  .acerca-de .info-container .about-gallery{
+    flex-direction: column;
+  }
+  .acerca-de .info-container .about-gallery img{
+    width: 100%;
+  }
+  /** Nosotros **/
+
+  /** Servicios **/
+  .our-services .container-services .service-img img{
+    width: 94%;
+    margin-bottom: 30px;
+  }
+  /** Servicios **/
+}
+
+@media only screen and (max-width: 590px){
+  /** IMG Header **/
+  .img-header .welcome h1{
+    font-size: 30px;
+  }
+  .img-header .welcome hr{
+    width: 100px;
+  }
+  .img-header .welcome p{
+    font-size: 17px;
+  }
+  .img-header .welcome > button{
+    width: 100px;
+    font-size: 17px;
+  }
+  /** IMG Header **/
+}
+
+@media only screen and (max-width: 890px){
+   /** Motos **/
+   .our-bikes .bikes-title{
+     width: 80%;
+   }
+   .our-bikes .bikes-title h2{
+      width: 100%;
+      font-size: 43px;
+   }
+  .our-bikes .box-our-bikes .card-bike .card-img img{
+    width: 350px;
+    height: 200px;
+  }
+  .our-bikes .box-our-bikes .card-bike{
+    width: 100%;
+  }
+  .our-bikes .box-our-bikes .card-bike .bike-text p{
+    font-size: 17px;
+    line-height: 30px;
+  }
+  /** Motos **/
+  .footer .footer-content .footer-title h2{
+    font-size: 30px;
+  }
+  .footer .formulario-content #formulario .mensaje-form p{
+    font-size: 17px;
+  }
+  .footer .footer-content .footer-text{
+    padding: 10px;
+  }
+  .footer .footer-content .footer-text p{
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width:900px){
+  .footer .formulario-content{
+    width: 85%;
+    padding: 20px;
+  }
+  .footer .formulario-content #formulario input{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:500px){
+  .img-header .welcome h1{
+    font-size: 25px;
+  }
+  .img-header .welcome p{
+    font-size: 13px;
+  }
+  .img-header .welcome button{
+    font-size: 15px;
+  }
+  .acerca-de .info-container h1{
+    font-size: 33px;
+  }
+  .acerca-de .info-container p{
+    font-size: 15px;
+    margin: 15px;
+    justify-content: center;
+  }
+  .acerca-de .info-container{
+    width: 100%;
+  }
+  .acerca-de .info-container .about-gallery{
+    width: 100%;
+    align-items: center;
+  }
+  .acerca-de .info-container .about-gallery img{
+    width: 300px;
+    height: 180px;
+  }
+  .our-services .container-services{
+    align-items: center;
+  }
+  .our-services .container-services .service-title{
+    width: 90%;
+  }
+  .our-services .container-services .service-title h2{
+    font-size: 28px;
+  }
+  .our-services .container-services .service-img .card-service .service-text h4{
+    font-size: 20px;
+  }
+  .our-services .container-services .service-img .card-service .card-img img{
+    width: 270px;
+    height: 270px;
+  }
+  .our-bikes .bikes-title h2{
+    width: 100%;
+    font-size: 33px;
+  }
+  .our-bikes .box-our-bikes .card-bike .bike-text h4{
+    font-size: 17px;
+  }
+  .our-bikes .box-our-bikes .card-bike .bike-text p{
+    font-size: 14px;
+  }
+  .footer .footer-content .footer-title{
+    width: 90%;
+  }
+  .footer .footer-content .footer-title h2{
+    font-size: 25px;
+  }
+  .footer .footer-content .formulario-content{
+    width: 75%;
+    padding: 5px;
+    top: 0;
+    padding-bottom: 15px;
+  }
+  .footer .footer-content .formulario-content #formulario .send button{
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+  }
+  .footer .footer-content .formulario-content #formulario .mensaje-form p{
+    font-size: 15px;
+  }
+}
+/** Media Query **/
